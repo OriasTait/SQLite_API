@@ -87,6 +87,17 @@ namespace SQLite
             //=============
             // Cleanup Environment
             //=============
+            Con.WriteLine(Environment.NewLine);
+            Con.WriteLine("Shrink the database.");
+            if (Results == ProcState.Good)
+            {
+                Results = SQLiteDB.Shrink();
+                if (Results == ProcState.Error)
+                {
+                    Con.Write("Error reading from database: ");
+                    Con.WriteLine(SQLiteDB.Error);
+                }
+            }
 
             //=============
             // Pause

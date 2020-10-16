@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Methods\Shrink.cs" />
     <Compile Include="Methods\ExecuteQuery.cs" />
     <Compile Include="Methods\ExecuteNonQuery.cs" />
     <Compile Include="Methods\CreateConnection.cs" />
