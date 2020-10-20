@@ -80,6 +80,6 @@ namespace SQLite
             //=============
             // Return the results
             return Results;
-        } // static int ReadFromDatabase
+        } // static ProcState ReadFromDatabase
     } // class Program
 } // namespace SQLite

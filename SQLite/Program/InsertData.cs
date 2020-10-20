@@ -60,6 +60,6 @@ namespace SQLite
             //=============
             // Return the results
             return Results;
-        } // static ProcState CreateTables
+        } // static ProcState InsertData
     } // class Program
 } // namespace SQLite

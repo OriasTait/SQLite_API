@@ -52,11 +52,13 @@ namespace SQLite_API
                 switch(DB_Conn)
                 {
                     case ConnectionType.DS:
-                        conn = new SQLiteConnection("Data Source=\"" + DB_Path + DB_Name + "\"; Compress = True; ");
+                        ConnectionString = "Data Source=\"" + DB_Path + DB_Name + "\"; Compress = True; ";
+                        conn = new SQLiteConnection(ConnectionString);
                         break;
 
                     case ConnectionType.URI:
-                        conn = new SQLiteConnection("URI=file:" + DB_Path + DB_Name + "; Compress = True; ");
+                        ConnectionString = "URI=file:" + DB_Path + DB_Name + "; Compress = True; ";
+                        conn = new SQLiteConnection(ConnectionString);
                         break;
 
                     default:

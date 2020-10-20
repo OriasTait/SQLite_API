@@ -52,6 +52,7 @@ namespace SQLite_API
         // Fields - SQLite Specific
         //=============
         public ConnectionType DB_Conn;  // Database Connection Type
+        public string ConnectionString; // Connection String
         public SQLiteConnection conn;   // SQLite Connection
         public DataSet QueryResults;    // Results of a query of the database
         public string SQL;              // SQLite SQL text

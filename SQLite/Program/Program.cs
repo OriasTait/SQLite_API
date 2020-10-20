@@ -1,6 +1,7 @@
 ﻿using SQLite_API;  // Reference the SQLiteAPI Routines
 using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,6 +41,10 @@ namespace SQLite
             {
                 Con.Write("Error in creating database connection: ");
                 Con.WriteLine(SQLiteDB.Error);
+            }
+            else
+            {
+                Con.WriteLine("Connection made => " + SQLiteDB.ConnectionString);
             }
 
             // Create the appropriate tables
