@@ -62,7 +62,7 @@ namespace SQLite_API
                         break;
 
                     default:
-                        Error = Error + "Unknown Database Connection; ";
+                        Error += "Unknown Database Connection; ";
                         Results = Status.Error;
                         break;
                 }
