@@ -72,6 +72,6 @@ namespace SQLite_API
             // Cleanup Environment
             //=============
             return Results;
-        } // public Status CreateConnection
+        } // public Status CreateConnection()
     } // public partial class SQLiteAPI
 } // namespace SQLite_API

@@ -61,11 +61,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Methods\Shrink.cs" />
-    <Compile Include="Methods\ExecuteQuery.cs" />
-    <Compile Include="Methods\ExecuteNonQuery.cs" />
-    <Compile Include="Methods\CreateConnection.cs" />
-    <Compile Include="SQLiteAPI.cs" />
+    <Compile Include="SAID_Manager\SAID\Recycle.cs" />
+    <Compile Include="SAID_Manager\SAID\New.cs" />
+    <Compile Include="SAID_Manager\SAID\Obtain_Recycled_SAID.cs" />
+    <Compile Include="SAID_Manager\SAID\Obtain_New_SAID.cs" />
+    <Compile Include="SAID_Manager\SAID\Increment_New_SAID.cs" />
+    <Compile Include="SAID_Manager\SAID\ReverseString.cs" />
+    <Compile Include="SQLiteAPI\Shrink.cs" />
+    <Compile Include="SQLiteAPI\ExecuteQuery.cs" />
+    <Compile Include="SQLiteAPI\ExecuteNonQuery.cs" />
+    <Compile Include="SQLiteAPI\CreateConnection.cs" />
+    <Compile Include="SAID_Manager\SAID\Initialize.cs" />
+    <Compile Include="SAID_Manager\SAID\SAID.cs" />
+    <Compile Include="SQLiteAPI\SQLiteAPI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

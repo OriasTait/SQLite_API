@@ -1,7 +1,7 @@
 ﻿using SQLite_API;  // Reference the SQLiteAPI Routines
 using System;
 using System.Collections.Generic;
-using System.Data;
+using System.Data;  // Required for DataTableCollection
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,7 +28,7 @@ namespace SQLite
             //=============
             // Variables - Standard
             //=============
-            ProcState Results = ProcState.Good;
+            ProcState Results;
 
             //=============
             // Setup Environment

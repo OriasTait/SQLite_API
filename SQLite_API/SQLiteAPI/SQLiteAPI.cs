@@ -9,23 +9,23 @@ using System.Threading.Tasks;
 namespace SQLite_API
 {
     public partial class SQLiteAPI
-    {
-        /*
-        ===============================================================================================
-        PURPOSE:
-        Standardize the Aplication Programming Interface (API) to an SQLite database.
-        -----------------------------------------------------------------------------------------------
-        NOTES:
-        - This library leverages the NuGet Package system.data.sqlite.  It is required to include this
-          package into this project.
+    /*
+    ===============================================================================================
+    PURPOSE:
+    Standardize the Aplication Programming Interface (API) to an SQLite database.
+    -----------------------------------------------------------------------------------------------
+    NOTES:
+    - This library leverages the NuGet Package system.data.sqlite.  It is required to include this
+      package into this project.
 
-        - If the package compilation generates the error:
-          'Unable to load DLL 'SQLite.Interop.dll': The specified module could not be found. 
-          This is resolved by adding the system.data.sqlite NuGet Package to the Main program; Even
-          though it is never touched in the main, this causes the required dll to be copied to the
-          appropriate bin directory.
-        ===============================================================================================
-        */
+    - If the package compilation generates the error:
+      'Unable to load DLL 'SQLite.Interop.dll': The specified module could not be found. 
+      This is resolved by adding the system.data.sqlite NuGet Package to the Main program; Even
+      though it is never touched in the main, this causes the required dll to be copied to the
+      appropriate bin directory.
+    ===============================================================================================
+    */
+    {
         //=============
         // Enumerations
         //=============

@@ -1,6 +1,9 @@
 # SQLite_API
 Standardized API for SQLite databases written in .NET Framework 4.6.1.
 
+NOTES:
+* This requires that the NuGet packate system.data.sqlite be installed in the project as well.
+
 ## SQLite_API
 The DLL containing the class that standardizes the API interfacing with a SQLite database.
 * CreateConnection => Create a connection to the SQLite database based on the type of connection to use.

@@ -1,4 +1,5 @@
 ﻿using SQLite_API;  // Reference the SQLiteAPI Routines
+using SQLite_API.SAID_Manager;  // Reference the SAID Routines
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
@@ -22,31 +23,42 @@ namespace SQLite
             //=============
             // Variables - Standard
             //=============
+            SAID AppSAID = new SAID();  // New instance of the SAID
             SQLiteAPI SQLiteDB = new SQLiteAPI();  // New instance of SQLite Database
             ProcState Results;
 
             //=============
             // Setup Environment
             //=============
-            // Initialize the database with a Data Source Connection
-            SQLiteDB.DB_Name = "database.db";  // Database Name
-            SQLiteDB.DB_Path = @"D:\Work\Code\SQLite_API\Working\";  // Database Location
-            SQLiteDB.DB_Conn = ConnType.DS;  // Use a connection type of Data Source
+            Results = SetupDatabase(ref SQLiteDB);
 
-            // Create the database connection
-            Con.WriteLine("Creating the connection");
-            Results = SQLiteDB.CreateConnection();
+            //=============
+            // Work with SAIDs
+            //=============
+            Con.WriteLine(Environment.NewLine);
+            Con.WriteLine("Work with SAIDs");
 
-            if (Results == ProcState.Error)
-            {
-                Con.Write("Error in creating database connection: ");
-                Con.WriteLine(SQLiteDB.Error);
-            }
+            AppSAID.Initialize(ref SQLiteDB);
+            
+            // Obtain a new SAID
+            string NewSAID = AppSAID.New(ref SQLiteDB);
+
+            //=============
+            //=============
+            // Duplicate the following for all processing at this level; use the ProcState to identify appropriate errors to indicate in the error field
+            //=============
+            //=============
+            if (SQLiteDB.Error != string.Empty)
+            { Con.WriteLine("New SAID => {0}", NewSAID); }
             else
-            {
-                Con.WriteLine("Connection made => " + SQLiteDB.ConnectionString);
-            }
+            { Con.WriteLine("New SAID => {0}", SQLiteDB.Error); }
 
+            // Recycle the SAID
+            AppSAID.Recycle(ref SQLiteDB, NewSAID);
+
+            //=============
+            // Work with Tables
+            //=============
             // Create the appropriate tables
             Con.WriteLine(Environment.NewLine);
             Con.WriteLine("Creating the tables.");
@@ -74,7 +86,7 @@ namespace SQLite
             }
 
             //=============
-            // Body
+            // Read from Tables
             //=============
             // Read information from the database
             Con.WriteLine(Environment.NewLine);

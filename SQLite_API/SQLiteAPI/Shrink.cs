@@ -15,6 +15,11 @@ namespace SQLite_API
         ===============================================================================================
         PURPOSE:
         Re-organize the database, releasing unused space back to the OS.
+        -----------------------------------------------------------------------------------------------
+        NOTES:
+        - This leverages the SQLite command "VACUUM".  The VACUUM command rebuilds the database file,
+          repacking it into a minimal amount of disk space.
+          Reference: https://www.sqlite.org/lang_vacuum.html
         ===============================================================================================
         */
         {

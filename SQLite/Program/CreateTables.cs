@@ -33,7 +33,7 @@ namespace SQLite
             //=============
             // Variables - Standard
             //=============
-            ProcState Results = ProcState.Good;
+            ProcState Results;
 
             //=============
             // Body
